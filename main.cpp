@@ -18,6 +18,7 @@ int main() {
 
 	auto sy = Syntax(token_stream);
 	sy.parse();
+
 	auto se = Semantic();
 	se.parse();
 
