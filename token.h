@@ -2,25 +2,26 @@
 #define TOKEN_H
 
 #include <vector>
+#include <optional>
+#include "jc.h"
 
 using namespace std;
 
-enum TokenType;
-struct Token;
-using TokenStream = vector<Token>;
+enum class TokenType;
 
-enum TokenType {
-	ID;
-	DIGIT;
-	DIV_OP;
-	MULT_OP;
-	ADD_OP;
-	SUB_OP;
+enum class TokenType {
+	ID,
+	DIGIT,
+	DIV_OP,
+	MUL_OP,
+	ADD_OP,
+	SUB_OP,
 };
 
 struct Token {
 	TokenType type;
-	int symbol_table_entry;
+	optional<Attribute> attribute;
+    friend ostream& operator<<(ostream& os, const Token& t);
 };
 
 #endif

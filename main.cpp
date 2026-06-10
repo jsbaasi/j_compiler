@@ -1,20 +1,25 @@
 #include <iostream>
-#include "lexer.h"
+#include "lex.h"
 #include "syntax.h"
 #include "semantic.h"
+#include "jc.h"
 
 using namespace std;
 
 int main() {
 	string input_stream{};
+    TokenStream token_stream{};
+    SymbolTable symbol_table{};
+
 	cin >> input_stream;
 
-	auto l = Lexer(input_stream);
-	auto token_stream = l.lex();
+	auto l = Lexer(input_stream, symbol_table);
+	l.lex(token_stream);
+
 	auto sy = Syntax(token_stream);
-	auto ast_syntax = sy.parse();
-	auto se = Semantic(ast_syntax);
-	auto ast_semantic = se.parse();
+	sy.parse();
+	auto se = Semantic();
+	se.parse();
 
 	return 0;
 }

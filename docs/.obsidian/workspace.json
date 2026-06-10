@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "09a511ca3a90b386",
+        "id": "f8b355a6f84cf1e0",
         "type": "tabs",
         "children": [
           {
-            "id": "83ce1ee2c5f1fb14",
+            "id": "825f4ccc146e4696",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -182,10 +182,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "83ce1ee2c5f1fb14",
+  "active": "ef9b01d4a528f0d2",
   "lastOpenFiles": [
-    "Excalidraw/architecture.excalidraw.md",
+    "Excalidraw/scratchpad.md",
     "README.md",
+    "Excalidraw/architecture.excalidraw.md",
     "Excalidraw",
     "Welcome.md"
   ]
