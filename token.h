@@ -5,6 +5,8 @@
 
 using namespace std;
 
+enum TokenType;
+struct Token;
 using TokenStream = vector<Token>;
 
 enum TokenType {
